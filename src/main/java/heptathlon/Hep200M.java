@@ -20,11 +20,11 @@ public class Hep200M {
 			try {
 				// Acceptable values.
 				if (runningTime < 14) {
-					System.out.println("Value too low");
+					System.out.println("Value too low. (Must be higher than 14).");
 					runningTime = inputResult.enterResult();
 				} else if (runningTime > 42.08) {
 					// get 1 point in 42.08sec
-					System.out.println("Value too high");
+					System.out.println("Value too high (Must be lower than 42.08).");
 					runningTime = inputResult.enterResult();
 				} else {
 					score = calc.calculateTrack(A, B, C, runningTime);

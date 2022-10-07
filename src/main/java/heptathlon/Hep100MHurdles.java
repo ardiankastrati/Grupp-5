@@ -21,10 +21,10 @@ public class Hep100MHurdles {
 			try {
 				// Acceptable values.
 				if (runningTime < 5) {
-					System.out.println("Value too low");
+					System.out.println("Value too low. (Must be higher than 5).");
 					runningTime = inputResult.enterResult();
 				} else if (runningTime > 26.4) {
-					System.out.println("Value too high");
+					System.out.println("Value too high (Must be lower than 26.4).");
 					runningTime = inputResult.enterResult();
 					//This was commented, being commented resulted in a continuous loop.
 				} else {

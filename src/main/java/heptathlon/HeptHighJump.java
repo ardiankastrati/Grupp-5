@@ -21,11 +21,11 @@ public class HeptHighJump {
 			try {
 				// Acceptable values in cm
 				if (distance < 75.7) {
-					System.out.println("Value too low");
+					System.out.println("Value too low. (Must be higher than 75.7).");
 					distance = inputResult.enterResult();
 				} else if (distance > 270) {
 
-					System.out.println("Value too high");
+					System.out.println("Value too high (Must be lower than 270).");
 					distance = inputResult.enterResult();
 
 				} else {

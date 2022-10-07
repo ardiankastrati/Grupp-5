@@ -21,11 +21,11 @@ public class HeptShotPut {
 			try {
 				// Acceptable values.
 				if (distance < 5) {
-					System.out.println("Value too low");
+					System.out.println("Value too low. (Must be higher than 5).");
 					distance = inputResult.enterResult();
 				} else if (distance > 100) {
 
-					System.out.println("Value too high");
+					System.out.println("Value too high (Must be lower than 100).");
 					distance = inputResult.enterResult();
 
 				} else {
