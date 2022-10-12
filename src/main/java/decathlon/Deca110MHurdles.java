@@ -13,7 +13,7 @@ public class Deca110MHurdles {
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on time. All running events.
-	public void calculateResult(double runningTime) {
+	public double calculateResult(double runningTime) {
 
 		while (active) {
 
@@ -35,6 +35,7 @@ public class Deca110MHurdles {
 			}
 		}
 		System.out.println("The result is " + score);
+		return score;
 
 	}
 

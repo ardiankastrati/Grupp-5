@@ -47,93 +47,96 @@ public class SelectDiscipline {
 	
 	//Receive input	of selection of discipline.
 
-	public void inputSelection() {
+	public double inputSelection() {
 		System.out.println("Select discipline.");
 		printDisciplines();
+		double returnTest = 0;
 
 		try {
 
 			disciplineSelected = Integer.parseInt(sc.nextLine());
-			makeSelection();
+			returnTest = makeSelection();
 
 		} catch (Exception e) {
 			System.out.println("Invalid input, try again.");
 			System.out.println("");
 			inputSelection();
 		}
+		return returnTest;
 
 	}
 
 	// Check input of discipline.
-	public void makeSelection() {
+	public double makeSelection() {
+		double currentScore = 0;
 		switch (disciplineSelected) {
 		case 1:
 			System.out.println("Please enter a value between 5 and 17.8.");
-			deca100M.calculateResult(inputResult.enterResult());
+			currentScore = deca100M.calculateResult(inputResult.enterResult());
 			break;
 		case 2:
-			System.out.println("Please enter a value between 10 and 28.5.");
-			deca400M.calculateResult(inputResult.enterResult());
+			System.out.println("Please enter a value between 20 and 28.5.");
+			currentScore =  deca400M.calculateResult(inputResult.enterResult());
 			break;
 		case 3:
 			System.out.println("Please enter a value between 20 and 100.");
-			deca110MHurdles.calculateResult(inputResult.enterResult());
+			currentScore = deca110MHurdles.calculateResult(inputResult.enterResult());
 			break;
 		case 4:
 			System.out.println("Please enter a value between 2 and 7.");
-			deca1500M.calculateResult(inputResult.enterResult());
+			currentScore = deca1500M.calculateResult(inputResult.enterResult());
 			break;
 		case 5:
 			System.out.println("Please enter a value between 250 and 1000.");
-			decaLongJump.calculateResult(inputResult.enterResult());
+			currentScore = decaLongJump.calculateResult(inputResult.enterResult());
 			break;
 		case 6:
 			System.out.println("Please enter a value between 0 and 300.");
-			highJump.calculateResult(inputResult.enterResult());
+			currentScore = highJump.calculateResult(inputResult.enterResult());
 			break;
 		case 7:
 			System.out.println("Please enter a value between 2 and 1000.");
-			poleVault.calculateResult(inputResult.enterResult());
+			currentScore = poleVault.calculateResult(inputResult.enterResult());
 			break;
 		case 8:
 			System.out.println("Please enter a value between 0 and 85.");
-			discusThrow.calculateResult(inputResult.enterResult());
+			currentScore = discusThrow.calculateResult(inputResult.enterResult());
 			break;
 		case 9:
 			System.out.println("Please enter a value between 0 and 110.");
-			decaJavelinThrow.calculateResult(inputResult.enterResult());
+			currentScore = decaJavelinThrow.calculateResult(inputResult.enterResult());
 			break;
 		case 10:
 			System.out.println("Please enter a value between 0 and 30.");
-			decaShotPut.calculateResult(inputResult.enterResult());
+			currentScore = decaShotPut.calculateResult(inputResult.enterResult());
 			break;
 		case 11:
 			System.out.println("Please enter a value between 14 and 42.08.");
-			hep200M.calculateResult(inputResult.enterResult());
+			currentScore = hep200M.calculateResult(inputResult.enterResult());
 			break;
 		case 12:
 			System.out.println("Please enter a value between 70 and 250.79.");
-			hep800M.calculateResult(inputResult.enterResult());
+			currentScore = hep800M.calculateResult(inputResult.enterResult());
 			break;
 		case 13:
 			System.out.println("Please enter a value between 5 and 26.4.");
-			hep100MHurdles.calculateResult(inputResult.enterResult());
+			currentScore = hep100MHurdles.calculateResult(inputResult.enterResult());
 			break;
 		case 14:
 			System.out.println("Please enter a value between 75.7 and 270.");
-			hepHighJump.calculateResult(inputResult.enterResult());
+			currentScore = hepHighJump.calculateResult(inputResult.enterResult());
 			break;
 		case 15:
 			System.out.println("Please enter a value between 0 and 400.");
-			hepLongJump.calculateResult(inputResult.enterResult());
+			currentScore = hepLongJump.calculateResult(inputResult.enterResult());
 			break;
 		case 16:
 			System.out.println("Please enter a value between 5 and 100.");
-			hepShotPut.calculateResult(inputResult.enterResult());
+			currentScore = hepShotPut.calculateResult(inputResult.enterResult());
 			break;
 		case 17:
 			System.out.println("Please enter a value between 0 and 100.");
-			hepJavelinThrow.calculateResult(inputResult.enterResult());
+			currentScore = hepJavelinThrow.calculateResult(inputResult.enterResult());
 			break;
 		default:
 			System.out.println("Invalid input, try again.");
@@ -141,6 +144,7 @@ public class SelectDiscipline {
 			inputSelection();
 			break;
 		}
+		return currentScore;
 	}
 
 	// Needs more stuff.

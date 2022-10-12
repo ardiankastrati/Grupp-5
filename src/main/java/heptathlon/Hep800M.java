@@ -13,7 +13,7 @@ public class Hep800M {
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on time. All running events.
-	public void calculateResult(double runningTime) {
+	public double calculateResult(double runningTime) {
 
 		while (active) {
 
@@ -36,6 +36,7 @@ public class Hep800M {
 			}
 		}
 		System.out.println("The result is " + score);
+		return score;
 
 	}
 

@@ -16,7 +16,7 @@ public class InputName {
 		while (active) {
 			System.out.println("Please enter the competitor's name:");
 			compName = sc.nextLine();
-			if (!compName.contains(".*[a-öA-ö]")) {
+			if (!compName.matches(".*[a-öA-ö]")) {
 				System.out.println("Only use letters when putting in competitors name.");
 				//Changed keyword at line 19 from matches to "contains", preventing a bug causing integers to be accepted as valid names.
 

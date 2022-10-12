@@ -14,7 +14,7 @@ public class Hep100MHurdles {
 	InputResult inputResult = new InputResult();
 
 	// Calculate the score based on time. All running events.
-	public void calculateResult(double runningTime) {
+	public double calculateResult(double runningTime) {
 
 		while (active) {
 
@@ -25,8 +25,7 @@ public class Hep100MHurdles {
 					runningTime = inputResult.enterResult();
 				} else if (runningTime > 26.4) {
 					System.out.println("Value too high (Must be lower than 26.4).");
-					runningTime = inputResult.enterResult();
-					//This was commented, being commented resulted in a continuous loop.
+					runningTime = inputResult.enterResult(); //This was commented, being commented resulted in a continuous loop.
 				} else {
 
 					score = calc.calculateTrack(A, B, C, runningTime);
@@ -38,6 +37,7 @@ public class Hep100MHurdles {
 			}
 		}
 		System.out.println("The result is " + score);
+		return score;
 
 	}
 
