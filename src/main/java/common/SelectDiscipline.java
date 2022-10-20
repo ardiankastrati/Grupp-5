@@ -31,7 +31,7 @@ public class SelectDiscipline {
 	Deca110MHurdles deca110MHurdles = new Deca110MHurdles();
 	Deca1500M deca1500M = new Deca1500M();
 	DecaLongJump decaLongJump = new DecaLongJump();
-	DecaHighJump highJump = new DecaHighJump();
+	DecaHighJump decaHighJump = new DecaHighJump();
 	DecaDiscusThrow discusThrow = new DecaDiscusThrow();
 	DecaShotPut decaShotPut = new DecaShotPut();
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
@@ -75,11 +75,11 @@ public class SelectDiscipline {
 			currentScore = deca100M.calculateResult(inputResult.enterResult());
 			break;
 		case 2:
-			System.out.println("Please enter a value between 20 and 28.5.");
+			System.out.println("Please enter a value between 20 and 100.");
 			currentScore =  deca400M.calculateResult(inputResult.enterResult());
 			break;
 		case 3:
-			System.out.println("Please enter a value between 20 and 100.");
+			System.out.println("Please enter a value between 10 and 28.5.");
 			currentScore = deca110MHurdles.calculateResult(inputResult.enterResult());
 			break;
 		case 4:
@@ -92,7 +92,7 @@ public class SelectDiscipline {
 			break;
 		case 6:
 			System.out.println("Please enter a value between 0 and 300.");
-			currentScore = highJump.calculateResult(inputResult.enterResult());
+			currentScore = decaHighJump.calculateResult(inputResult.enterResult());
 			break;
 		case 7:
 			System.out.println("Please enter a value between 2 and 1000.");

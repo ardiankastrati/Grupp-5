@@ -1,18 +1,18 @@
 package common;
 
-import decathlon.*;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Scanner;
 
-public class Main extends JFrame implements ActionListener {
+public class Main {
 
 	public static void main(String[] args) {
 
+		//JFRAME AREA
+		MyFrame frame = new MyFrame();
+		//JFRAME AREA
 
-		Scanner scan = new Scanner(System.in);
+
+		/*Scanner scan = new Scanner(System.in);
 		InputName inputName = new InputName();
 		SelectDiscipline selectDiscipline = new SelectDiscipline();
 
@@ -44,11 +44,6 @@ public class Main extends JFrame implements ActionListener {
 				System.out.println("Wtf yo!");
 			}
 
-		}
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-
+		}*/
 	}
 }
